@@ -1,3 +1,8 @@
+"""
+based on https://graviraja.github.io/vanillavae/#
+ApocalyVec access on 5/22/20
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
