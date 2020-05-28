@@ -18,12 +18,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from keras.layers import Lambda, Input, Dense
-from keras.models import Model
-from keras.datasets import mnist
-from keras.losses import mse, binary_crossentropy
-from keras.utils import plot_model
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.losses import mse, binary_crossentropy
 from keras import backend as K
+
+from tensorflow.keras.layers import Input, Dense
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -34,6 +34,11 @@ import os
 # reparameterization trick
 # instead of sampling from Q(z|X), sample epsilon = N(0,I)
 # z = z_mean + sqrt(var) * epsilon
+from tensorflow.python.keras import Model
+from tensorflow.python.keras.layers import Lambda
+from tensorflow.python.keras.utils import plot_model
+
+
 def sampling(args):
     """Reparameterization trick by sampling from an isotropic unit Gaussian.
     # Arguments
